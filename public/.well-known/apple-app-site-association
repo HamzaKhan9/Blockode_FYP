@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "8R27ZAPR43.org.autoworkz.lifeaudit",
+        "paths": [
+          "/invitation/*"
+        ]
+      }
+    ]
+  }
+}

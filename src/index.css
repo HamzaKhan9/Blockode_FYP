@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+:root {
+  --color-primary: rgb(41, 97, 96);
+  --color-primary-light: rgb(77, 176, 175);
+  --color-primary-dark: rgb(33, 115, 113);
+  --color-secondary: rgb(255, 198, 75);
+  --color-secondary-light: rgb(245, 221, 147);
+  --color-secondary-dark: rgb(219, 169, 61);
+  --color-success: rgb(5, 181, 99);
+  --color-success-dark: rgb(4, 129, 79);
+  --color-danger: rgb(220, 53, 69);
+  --color-bg-primary: rgb(240, 240, 240);
+  --color-bg-secondary: rgb(240, 240, 240);
+  --color-light: rgb(255, 255, 255);
+  --color-text: rgb(0, 0, 0);
+  --color-text-light: rgb(120, 120, 120);
+  --toastify-color-info: var(--color-primary) !important;
+}
+
+:root[class~="dark"] {
+  --color-primary: rgb(255, 198, 75);
+  --color-primary-light: rgb(245, 221, 147);
+  --color-primary-dark: rgb(219, 169, 61);
+  --color-secondary: rgb(41, 97, 96);
+  --color-secondary-light: rgb(96, 226, 224);
+  --color-secondary-dark: rgb(33, 115, 113);
+  --color-success: rgb(5, 181, 99);
+  --color-success-dark: rgb(4, 129, 79);
+  --color-danger: rgb(220, 53, 69);
+  --color-bg-primary: rgb(6, 9, 66);
+  --color-bg-secondary: rgb(36, 6, 69);
+  --color-light: rgb(255, 255, 255);
+  --color-text: rgb(255, 255, 255);
+  --color-text-light: rgb(202, 202, 202);
+}
+
+/*primary: "#FFC64B",
+secondary: "#60E2E0",
+success: "#05b563",
+successDark: "#04814f",
+danger: "#dc3545",
+primaryLight: "#f5dd93",
+primaryDark: "#dba93d",
+secondaryDark: "#217371",
+bgFirst: "#060942",
+bgSecond: "#240645", */
+
+/* Global Overrides */
+input {
+  --tw-ring-shadow: 0 0 transparent !important;
+}
+
+input[type=range]::-moz-range-thumb{
+  background: var(--color-secondary-dark);
+}
+input[type=range]::-ms-thumb{
+  background: var(--color-secondary-dark);
+}
+
+input[type=range]::-webkit-slider-thumb{
+  background: transparent;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid var(--color-secondary-dark);
+}

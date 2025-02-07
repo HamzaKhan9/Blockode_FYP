@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "org.autoworkz.lifeaudit",
+      "sha256_cert_fingerprints": [
+        "DD:5F:2E:C0:99:5F:F7:85:DA:BE:46:F3:E1:4C:2A:75:BF:21:01:7C:2B:5F:07:A0:F8:6E:18:79:FD:90:1A:DC",
+        "A8:1E:E9:39:C5:6D:CD:5F:43:FB:A4:DB:3B:AB:70:D3:F4:88:B5:B3:BC:50:AA:F0:59:27:60:9F:AA:50:B1:E0",
+        "2A:F0:58:A8:43:3C:68:B4:6B:3D:81:47:CD:A3:6B:EB:91:BE:2E:B9:F7:3E:4B:B2:25:CA:02:10:F3:00:5A:B1"
+      ]
+    }
+  }
+]
