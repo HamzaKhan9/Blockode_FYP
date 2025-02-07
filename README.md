@@ -4,8 +4,8 @@
 
 ## On development environment
 
-`yarn start:dev`
+`npm run start:dev`
 
 ## On production environment
 
-`yarn start:prod`
+`npm run start:prod`
