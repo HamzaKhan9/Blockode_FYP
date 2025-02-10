@@ -94,7 +94,7 @@ function Header({ backLink, onShowHelp }: HeaderProps) {
             </button>
           )}
 
-          {/* <button
+          <button
             className="text-2xl cursor-pointer"
             onClick={() => _setDarkMode(!darkMode)}
           >
@@ -103,7 +103,7 @@ function Header({ backLink, onShowHelp }: HeaderProps) {
             ) : (
               <BsFillMoonFill className="text-primary" />
             )}
-          </button> */}
+          </button>
 
           {isDeletionPage ? null : profile ? (
             <Dropdown
