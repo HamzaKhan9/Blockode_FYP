@@ -128,13 +128,13 @@ function Header({ backLink, onShowHelp }: HeaderProps) {
                     Profile
                   </Dropdown.Item>
                   <Dropdown.Divider className="my-2" />
-                  {/* <Dropdown.Item
+                  <Dropdown.Item
                     className="text-black font-semibold hover:bg-primary hover:text-white"
                     onClick={() => navigate("/my-stats")}
                   >
                     Stats
                   </Dropdown.Item>
-                  <Dropdown.Divider className="my-2" /> */}
+                  <Dropdown.Divider className="my-2" />
                 </>
               )}
               <Dropdown.Item
