@@ -32,7 +32,7 @@ export const DASHBOARD_GAMES = [
     img: planeImg,
     description:
       "Soar through the skies and drop passengers to the target destination by coding your plane's flight path using the intuitive drag-and-drop interface.",
-    enabled: false,
+    enabled: true,
     id: GAME_IDS.BIRD,
     totalLevels: 10,
   },
@@ -41,7 +41,7 @@ export const DASHBOARD_GAMES = [
     img: turtleImg,
     description:
       "Dive into a creative coding adventure as you guide a virtual turtle through challenges, drawing colorful patterns and mastering programming concepts along the way.",
-    enabled: false,
+    enabled: true,
     id: GAME_IDS.TURTLE,
     totalLevels: 10,
   },

@@ -188,130 +188,130 @@ export const MAZE_LEVELS = [
     maxBlocks: 5,
   },
   // Level 5
-  // {
-  //   map: [
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 0, 0, 0, 0, 3, 0, 0],
-  //     [0, 0, 0, 0, 0, 1, 0, 0],
-  //     [0, 0, 0, 0, 0, 1, 0, 0],
-  //     [0, 0, 0, 0, 0, 1, 0, 0],
-  //     [0, 0, 0, 0, 0, 1, 0, 0],
-  //     [0, 0, 0, 2, 1, 1, 0, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //   ],
-  //   blockTypes: [
-  //     MAZE_BLOCK_TYPES.MOVE_FORWARD,
-  //     MAZE_BLOCK_TYPES.TURN,
-  //     MAZE_BLOCK_TYPES.FOREVER,
-  //   ],
-  //   maxBlocks: 5,
-  // },
-  // // Level 6
-  // {
-  //   map: [
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 1, 1, 1, 1, 1, 0, 0],
-  //     [0, 1, 0, 0, 0, 1, 0, 0],
-  //     [0, 1, 1, 3, 0, 1, 0, 0],
-  //     [0, 0, 0, 0, 0, 1, 0, 0],
-  //     [0, 2, 1, 1, 1, 1, 0, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //   ],
+  {
+    map: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 3, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 0, 0, 2, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
+    blockTypes: [
+      MAZE_BLOCK_TYPES.MOVE_FORWARD,
+      MAZE_BLOCK_TYPES.TURN,
+      MAZE_BLOCK_TYPES.FOREVER,
+    ],
+    maxBlocks: 5,
+  },
+  // Level 6
+  {
+    map: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 1, 1, 0, 0],
+      [0, 1, 0, 0, 0, 1, 0, 0],
+      [0, 1, 1, 3, 0, 1, 0, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 2, 1, 1, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
 
-  //   blockTypes: [
-  //     MAZE_BLOCK_TYPES.MOVE_FORWARD,
-  //     MAZE_BLOCK_TYPES.TURN,
-  //     MAZE_BLOCK_TYPES.IF,
-  //     MAZE_BLOCK_TYPES.FOREVER,
-  //   ],
-  //   maxBlocks: 5,
-  // },
-  // // Level 7
-  // {
-  //   map: [
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 0, 0, 0, 0, 1, 1, 0],
-  //     [0, 2, 1, 1, 1, 1, 0, 0],
-  //     [0, 0, 0, 0, 0, 1, 1, 0],
-  //     [0, 1, 1, 3, 0, 1, 0, 0],
-  //     [0, 1, 0, 1, 0, 1, 0, 0],
-  //     [0, 1, 1, 1, 1, 1, 1, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //   ],
-  //   blockTypes: [
-  //     MAZE_BLOCK_TYPES.MOVE_FORWARD,
-  //     MAZE_BLOCK_TYPES.TURN,
-  //     MAZE_BLOCK_TYPES.IF,
-  //     MAZE_BLOCK_TYPES.FOREVER,
-  //   ],
-  //   maxBlocks: 5,
-  // },
-  // // Level 8
-  // {
-  //   map: [
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 1, 1, 1, 1, 0, 0, 0],
-  //     [0, 1, 0, 0, 1, 1, 0, 0],
-  //     [0, 1, 1, 1, 0, 1, 0, 0],
-  //     [0, 0, 0, 1, 0, 1, 0, 0],
-  //     [0, 2, 1, 1, 0, 3, 0, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //   ],
+    blockTypes: [
+      MAZE_BLOCK_TYPES.MOVE_FORWARD,
+      MAZE_BLOCK_TYPES.TURN,
+      MAZE_BLOCK_TYPES.IF,
+      MAZE_BLOCK_TYPES.FOREVER,
+    ],
+    maxBlocks: 5,
+  },
+  // Level 7
+  {
+    map: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 1, 1, 0],
+      [0, 2, 1, 1, 1, 1, 0, 0],
+      [0, 0, 0, 0, 0, 1, 1, 0],
+      [0, 1, 1, 3, 0, 1, 0, 0],
+      [0, 1, 0, 1, 0, 1, 0, 0],
+      [0, 1, 1, 1, 1, 1, 1, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
+    blockTypes: [
+      MAZE_BLOCK_TYPES.MOVE_FORWARD,
+      MAZE_BLOCK_TYPES.TURN,
+      MAZE_BLOCK_TYPES.IF,
+      MAZE_BLOCK_TYPES.FOREVER,
+    ],
+    maxBlocks: 5,
+  },
+  // Level 8
+  {
+    map: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 1, 0, 0, 0],
+      [0, 1, 0, 0, 1, 1, 0, 0],
+      [0, 1, 1, 1, 0, 1, 0, 0],
+      [0, 0, 0, 1, 0, 1, 0, 0],
+      [0, 2, 1, 1, 0, 3, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
 
-  //   blockTypes: [
-  //     MAZE_BLOCK_TYPES.MOVE_FORWARD,
-  //     MAZE_BLOCK_TYPES.TURN,
-  //     MAZE_BLOCK_TYPES.IF,
-  //     MAZE_BLOCK_TYPES.FOREVER,
-  //   ],
-  //   maxBlocks: 10,
-  // },
-  // // Level 9
-  // {
-  //   map: [
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 1, 1, 1, 1, 1, 0, 0],
-  //     [0, 0, 1, 0, 0, 0, 0, 0],
-  //     [3, 1, 1, 1, 1, 1, 1, 0],
-  //     [0, 1, 0, 1, 0, 1, 1, 0],
-  //     [1, 1, 1, 1, 1, 0, 1, 0],
-  //     [0, 1, 0, 1, 0, 2, 1, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //   ],
+    blockTypes: [
+      MAZE_BLOCK_TYPES.MOVE_FORWARD,
+      MAZE_BLOCK_TYPES.TURN,
+      MAZE_BLOCK_TYPES.IF,
+      MAZE_BLOCK_TYPES.FOREVER,
+    ],
+    maxBlocks: 10,
+  },
+  // Level 9
+  {
+    map: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 1, 1, 0, 0],
+      [0, 0, 1, 0, 0, 0, 0, 0],
+      [3, 1, 1, 1, 1, 1, 1, 0],
+      [0, 1, 0, 1, 0, 1, 1, 0],
+      [1, 1, 1, 1, 1, 0, 1, 0],
+      [0, 1, 0, 1, 0, 2, 1, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
 
-  //   blockTypes: [
-  //     MAZE_BLOCK_TYPES.MOVE_FORWARD,
-  //     MAZE_BLOCK_TYPES.TURN,
-  //     MAZE_BLOCK_TYPES.IF,
-  //     MAZE_BLOCK_TYPES.IF_ELSE,
-  //     MAZE_BLOCK_TYPES.FOREVER,
-  //   ],
-  //   maxBlocks: 7,
-  // },
+    blockTypes: [
+      MAZE_BLOCK_TYPES.MOVE_FORWARD,
+      MAZE_BLOCK_TYPES.TURN,
+      MAZE_BLOCK_TYPES.IF,
+      MAZE_BLOCK_TYPES.IF_ELSE,
+      MAZE_BLOCK_TYPES.FOREVER,
+    ],
+    maxBlocks: 7,
+  },
 
-  // // Level 10
-  // {
-  //   map: [
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //     [0, 1, 1, 0, 3, 0, 1, 0],
-  //     [0, 1, 1, 0, 1, 1, 1, 0],
-  //     [0, 1, 0, 1, 0, 1, 0, 0],
-  //     [0, 1, 1, 1, 1, 1, 1, 0],
-  //     [0, 0, 0, 1, 0, 0, 1, 0],
-  //     [0, 2, 1, 1, 1, 0, 1, 0],
-  //     [0, 0, 0, 0, 0, 0, 0, 0],
-  //   ],
-  //   blockTypes: [
-  //     MAZE_BLOCK_TYPES.MOVE_FORWARD,
-  //     MAZE_BLOCK_TYPES.TURN,
-  //     MAZE_BLOCK_TYPES.IF,
-  //     MAZE_BLOCK_TYPES.IF_ELSE,
-  //     MAZE_BLOCK_TYPES.FOREVER,
-  //   ],
-  //   maxBlocks: 9,
-  // },
+  // Level 10
+  {
+    map: [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 1, 1, 0, 3, 0, 1, 0],
+      [0, 1, 1, 0, 1, 1, 1, 0],
+      [0, 1, 0, 1, 0, 1, 0, 0],
+      [0, 1, 1, 1, 1, 1, 1, 0],
+      [0, 0, 0, 1, 0, 0, 1, 0],
+      [0, 2, 1, 1, 1, 0, 1, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
+    blockTypes: [
+      MAZE_BLOCK_TYPES.MOVE_FORWARD,
+      MAZE_BLOCK_TYPES.TURN,
+      MAZE_BLOCK_TYPES.IF,
+      MAZE_BLOCK_TYPES.IF_ELSE,
+      MAZE_BLOCK_TYPES.FOREVER,
+    ],
+    maxBlocks: 9,
+  },
 ];
 
 export const MAZE_ON_BOARDING_STEPS = [

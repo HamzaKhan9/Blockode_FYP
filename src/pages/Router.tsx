@@ -11,11 +11,11 @@ import { ToastContainer } from "react-toastify";
 import { useLocalStorage } from "usehooks-ts";
 import AlertPopupModal from "../components/AlertPopup";
 import "react-toastify/dist/ReactToastify.css";
-// import TurtleLevelsPage from "./TurtleGamePage/TurtleLevelsPage";
-// import TurtleGamePage from "./TurtleGamePage/TurtleGamePage";
+import TurtleLevelsPage from "./TurtleGamePage/TurtleLevelsPage";
+import TurtleGamePage from "./TurtleGamePage/TurtleGamePage";
 import { WebviewLayout } from "../layout/WebviewLayout";
-// import BirdGamePage from "./BirdGamePage/BirdGamePage";
-// import BirdLevelsPage from "./BirdGamePage/BirdLevelsPage";
+import BirdGamePage from "./BirdGamePage/BirdGamePage";
+import BirdLevelsPage from "./BirdGamePage/BirdLevelsPage";
 import StandaloneDelete from "./StandaloneDelete";
 import Invitation from "./Invitation";
 
@@ -41,22 +41,22 @@ const router = createBrowserRouter([
     ),
   },
   //webview pages
-  // {
-  //   path: `/games/webview/${GAME_IDS.TURTLE}/levels/:level`,
-  //   element: (
-  //     <WebviewLayout showHeader={false} className="p-0">
-  //       <TurtleGamePage showHeader={false} />
-  //     </WebviewLayout>
-  //   ),
-  // },
-  // {
-  //   path: `/games/webview/${GAME_IDS.BIRD}/levels/:level`,
-  //   element: (
-  //     <WebviewLayout showHeader={false} className="p-0">
-  //       <BirdGamePage showHeader={false} />
-  //     </WebviewLayout>
-  //   ),
-  // },
+  {
+    path: `/games/webview/${GAME_IDS.TURTLE}/levels/:level`,
+    element: (
+      <WebviewLayout showHeader={false} className="p-0">
+        <TurtleGamePage showHeader={false} />
+      </WebviewLayout>
+    ),
+  },
+  {
+    path: `/games/webview/${GAME_IDS.BIRD}/levels/:level`,
+    element: (
+      <WebviewLayout showHeader={false} className="p-0">
+        <BirdGamePage showHeader={false} />
+      </WebviewLayout>
+    ),
+  },
   {
     path: `/games/webview/${GAME_IDS.MAZE}/levels/:level`,
     element: (
@@ -65,46 +65,46 @@ const router = createBrowserRouter([
       </WebviewLayout>
     ),
   },
-  // {
-  //   path: `/games/${GAME_IDS.TURTLE}/levels/:level`,
-  //   element: (
-  //     <PageLayout
-  //       authType={AuthType.ONLY_AUTHENTICATED}
-  //       showHeader={false}
-  //       className="p-0"
-  //     >
-  //       <TurtleGamePage />
-  //     </PageLayout>
-  //   ),
-  // },
-  // {
-  //   path: `/games/${GAME_IDS.BIRD}/levels/:level`,
-  //   element: (
-  //     <PageLayout
-  //       authType={AuthType.ONLY_AUTHENTICATED}
-  //       showHeader={false}
-  //       className="p-0"
-  //     >
-  //       <BirdGamePage />
-  //     </PageLayout>
-  //   ),
-  // },
-  // {
-  //   path: `/games/${GAME_IDS.TURTLE}/levels`,
-  //   element: (
-  //     <PageLayout authType={AuthType.ONLY_AUTHENTICATED} backLink="/">
-  //       <TurtleLevelsPage />
-  //     </PageLayout>
-  //   ),
-  // },
-  // {
-  //   path: `/games/${GAME_IDS.BIRD}/levels`,
-  //   element: (
-  //     <PageLayout authType={AuthType.ONLY_AUTHENTICATED} backLink="/">
-  //       <BirdLevelsPage />
-  //     </PageLayout>
-  //   ),
-  // },
+  {
+    path: `/games/${GAME_IDS.TURTLE}/levels/:level`,
+    element: (
+      <PageLayout
+        authType={AuthType.ONLY_AUTHENTICATED}
+        showHeader={false}
+        className="p-0"
+      >
+        <TurtleGamePage />
+      </PageLayout>
+    ),
+  },
+  {
+    path: `/games/${GAME_IDS.BIRD}/levels/:level`,
+    element: (
+      <PageLayout
+        authType={AuthType.ONLY_AUTHENTICATED}
+        showHeader={false}
+        className="p-0"
+      >
+        <BirdGamePage />
+      </PageLayout>
+    ),
+  },
+  {
+    path: `/games/${GAME_IDS.TURTLE}/levels`,
+    element: (
+      <PageLayout authType={AuthType.ONLY_AUTHENTICATED} backLink="/">
+        <TurtleLevelsPage />
+      </PageLayout>
+    ),
+  },
+  {
+    path: `/games/${GAME_IDS.BIRD}/levels`,
+    element: (
+      <PageLayout authType={AuthType.ONLY_AUTHENTICATED} backLink="/">
+        <BirdLevelsPage />
+      </PageLayout>
+    ),
+  },
   {
     path: "/login",
     element: (
