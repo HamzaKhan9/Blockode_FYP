@@ -1,9 +1,9 @@
 import { createClient } from "@supabase/supabase-js";
 import { Database } from "../../types/database";
 
-const PROD_SUPABASE_BASE_URL = "https://kszrzybbmdzfsouztknz.supabase.co";
+const PROD_SUPABASE_BASE_URL = "https://mtzwzsxblhulourliqvr.supabase.co";
 const PROD_SUPABASE_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtzenJ6eWJibWR6ZnNvdXp0a256Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzM4Nzg2ODUsImV4cCI6MTk4OTQ1NDY4NX0.0MTWfumSyI3ob5zV38xzL1fcCWUnRWj2bjy0Lh6vU78";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10end6c3hibGh1bG91cmxpcXZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDMyODYyMTcsImV4cCI6MjAxODg2MjIxN30.kZ-m0q9DslLQ5mG9KWu9Y1NUUXpcaeZdOd7asnn0-nM";
 const DEV_SUPABASE_BASE_URL = "https://mtzwzsxblhulourliqvr.supabase.co";
 const DEV_SUPABASE_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im10end6c3hibGh1bG91cmxpcXZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDMyODYyMTcsImV4cCI6MjAxODg2MjIxN30.kZ-m0q9DslLQ5mG9KWu9Y1NUUXpcaeZdOd7asnn0-nM";
