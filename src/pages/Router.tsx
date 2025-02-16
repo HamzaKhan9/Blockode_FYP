@@ -17,7 +17,6 @@ import { WebviewLayout } from "../layout/WebviewLayout";
 import BirdGamePage from "./BirdGamePage/BirdGamePage";
 import BirdLevelsPage from "./BirdGamePage/BirdLevelsPage";
 import StandaloneDelete from "./StandaloneDelete";
-import Invitation from "./Invitation";
 
 const router = createBrowserRouter([
   {
@@ -126,14 +125,6 @@ const router = createBrowserRouter([
     element: (
       <PageLayout authType={AuthType.ONLY_AUTHENTICATED} backLink>
         <Profile />
-      </PageLayout>
-    ),
-  },
-  {
-    path: "/invitation",
-    element: (
-      <PageLayout authType={AuthType.ONLY_AUTHENTICATED}>
-        <Invitation />
       </PageLayout>
     ),
   },
