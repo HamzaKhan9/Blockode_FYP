@@ -29,9 +29,7 @@ function Header({ backLink, onShowHelp }: HeaderProps) {
   );
   const location = useLocation();
 
-  const isProfileComplete =
-    profile?.name &&
-    Boolean(profile?.workplace_ref || profile?.institution_ref);
+  const isProfileComplete = profile?.name;
   const onLogout = useCallback(() => {
     AlertPopup({
       message: "Are you sure you want to logout?",

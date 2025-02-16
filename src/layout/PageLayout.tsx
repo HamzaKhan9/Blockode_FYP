@@ -11,7 +11,6 @@ import { globalErrorHandler } from "../utils/errorHandler";
 import { useNavigate } from "react-router-dom";
 import { useQueryParam } from "../hooks/useQuery";
 import analytics from "../analytics";
-import ProfileService from "../services/profile";
 import { detectOS } from "../utils/miscUtils";
 
 export enum AuthType {
@@ -84,13 +83,7 @@ function PageLayout({
         } else if (data) {
           setProfile(data);
 
-          if (
-            !isDeletionPage &&
-            Boolean(
-              !data.name ||
-                Boolean(!data?.workplace_ref && !data?.institution_ref)
-            )
-          ) {
+          if (!isDeletionPage && Boolean(!data.name)) {
             if (gotoQuery || tokenQuery) {
               const token = tokenQuery || gotoQuery.split("=")[1];
               navigate(`/my-profile?edit=true&token=${token}`);
@@ -105,18 +98,9 @@ function PageLayout({
             return;
           }
         }
-        const workplace = data?.workplace_ref
-          ? await ProfileService.fetch_workplace(
-              //@ts-ignore
-              data?.workplace_ref
-            )
-          : {};
 
         analytics.identifyUser(session.user.id, {
           email: data?.email,
-          workplace_id: data?.workplace_ref,
-          // @ts-ignore
-          workplace_name: workplace?.workplace_name || "",
           operating_system: detectOS(),
         });
         analytics.trackEvent("session_start");

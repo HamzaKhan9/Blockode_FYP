@@ -41,7 +41,6 @@ const index = () => {
       e.preventDefault();
       setSubmitLoading(true);
 
-      // workplace: e.target.workplace.value,
       const updates = {
         id: profile?.id!,
         name: e.target.name.value,
@@ -51,7 +50,6 @@ const index = () => {
 
       const data = await ProfileService.upsert(updates);
 
-      // workplace: e.target.workplace.value,
       if (profile && data) {
         setProfile({
           ...(profile || {}),
@@ -74,9 +72,7 @@ const index = () => {
     }
   };
 
-  const showEdit =
-    profile?.name &&
-    Boolean(profile?.workplace_ref || profile?.institution_ref);
+  const showEdit = profile?.name;
   return (
     <div>
       <FunkyHeading className="pt-0 mt-4">My Profile</FunkyHeading>
