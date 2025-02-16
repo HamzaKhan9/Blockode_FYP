@@ -1,7 +1,6 @@
 import { SERVICE_TYPES } from "../../constants/services";
 import { SelectType, ServiceType } from "../../types/common";
 import { globalErrorHandler } from "../../utils/errorHandler";
-import { supabase } from "../supabase";
 
 export const fetchService = async (
   service: string,
