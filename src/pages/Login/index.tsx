@@ -36,7 +36,7 @@ function Login() {
           },
         }}
         theme={darkMode ? "dark" : "default"}
-        providers={["google"]}
+        providers={[]}
         queryParams={{
           signup_intent: "login",
           forgot_password_intent: "login",

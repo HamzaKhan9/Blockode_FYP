@@ -28,6 +28,7 @@ const upsert = async (record: {
     const { data: pathData } = storageBucket.getPublicUrl(imagePath);
     updatedData["profile_photo"] = pathData.publicUrl;
   }
+  console.log("updatedData: ", updatedData);
 
   const { error } = await supabase
     .from("profiles")
@@ -44,8 +45,34 @@ const upsert = async (record: {
   };
 };
 
+const create = async (record: {
+  id: ProfileInfo["id"];
+  email: ProfileInfo["email"];
+}) => {
+  const { id, email } = record;
+
+  // Prepare the data to be inserted.
+  const newData = {
+    id,
+    email,
+  };
+
+  // Insert a new row into the profiles table.
+  const { data, error } = await supabase
+    .from("profiles")
+    .insert(newData)
+    .single();
+
+  if (error) {
+    globalErrorHandler(error);
+    return null;
+  }
+  return data;
+};
+
 const ProfileService = {
   upsert,
+  create,
 };
 
 export default ProfileService;

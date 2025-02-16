@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useQueryParam } from "../hooks/useQuery";
 import analytics from "../analytics";
 import { detectOS } from "../utils/miscUtils";
+import ProfileService from "../services/profile";
 
 export enum AuthType {
   ONLY_AUTHENTICATED = "ONLY_AUTHENTICATED",
@@ -72,18 +73,39 @@ function PageLayout({
   useEffect(() => {
     if (session?.user.id) {
       (async () => {
-        const { data, error } = await supabase
+        let { data, error } = await supabase
           .from("profiles")
           .select(`*, game_info(*)`)
           .eq("id", session.user.id)
           .single();
 
+        if (error && error.message.includes("multiple (or no) rows returned")) {
+          await ProfileService.create({
+            id: session.user.id,
+            email: session.user.email!,
+          });
+
+          const result = await supabase
+            .from("profiles")
+            .select(`*, game_info(*)`)
+            .eq("id", session.user.id)
+            .single();
+
+          data = result.data;
+          error = result.error;
+        }
+
+        // Handle any remaining errors.
         if (error) {
           globalErrorHandler(error);
-        } else if (data) {
+          return;
+        }
+
+        // Process the data if available.
+        if (data) {
           setProfile(data);
 
-          if (!isDeletionPage && Boolean(!data.name)) {
+          if (!isDeletionPage && !data.name) {
             if (gotoQuery || tokenQuery) {
               const token = tokenQuery || gotoQuery.split("=")[1];
               navigate(`/my-profile?edit=true&token=${token}`);
@@ -94,11 +116,12 @@ function PageLayout({
           }
 
           if (!isDeletionPage && gotoQuery) {
-            navigate(`${gotoQuery}`);
+            navigate(gotoQuery);
             return;
           }
         }
 
+        // Analytics tracking.
         analytics.identifyUser(session.user.id, {
           email: data?.email,
           operating_system: detectOS(),

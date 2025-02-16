@@ -19,6 +19,7 @@ export const getErrorMessage = (
 
 export const globalErrorHandler = (error: any) => {
   const errorMsg = getErrorMessage(error);
+  console.trace(error);
   console.error(errorMsg, error);
   toast.error(errorMsg);
 };
