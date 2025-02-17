@@ -1,13 +1,6 @@
 import posthog from "posthog-js";
 import ReactGA from "react-ga4";
 import * as Sentry from "@sentry/react";
-import { useEffect } from "react";
-import {
-  useLocation,
-  useNavigationType,
-  matchRoutes,
-  createRoutesFromChildren,
-} from "react-router-dom";
 import { ENV } from "./services/supabase";
 
 const initAnalytics = () => {
@@ -21,23 +14,23 @@ const initAnalytics = () => {
     ReactGA.initialize("G-Z3PHCT9V4W");
 
     // Initialize Sentry
-    Sentry.init({
-      dsn: "https://47a3bafe0c7f8a8be4c0fb0293f6cbfa@o1387563.ingest.us.sentry.io/4507274436018176",
-      integrations: [
-        Sentry.browserTracingIntegration(),
-        Sentry.reactRouterV6BrowserTracingIntegration({
-          useEffect: useEffect,
-          useLocation,
-          useNavigationType,
-          createRoutesFromChildren,
-          matchRoutes,
-        }),
-        Sentry.replayIntegration(),
-      ],
-      tracesSampleRate: 1.0,
-      replaysSessionSampleRate: 0.1,
-      replaysOnErrorSampleRate: 1.0,
-    });
+    // Sentry.init({
+    //   dsn: "https://47a3bafe0c7f8a8be4c0fb0293f6cbfa@o1387563.ingest.us.sentry.io/4507274436018176",
+    //   integrations: [
+    //     Sentry.browserTracingIntegration(),
+    //     Sentry.reactRouterV6BrowserTracingIntegration({
+    //       useEffect: useEffect,
+    //       useLocation,
+    //       useNavigationType,
+    //       createRoutesFromChildren,
+    //       matchRoutes,
+    //     }),
+    //     Sentry.replayIntegration(),
+    //   ],
+    //   tracesSampleRate: 1.0,
+    //   replaysSessionSampleRate: 0.1,
+    //   replaysOnErrorSampleRate: 1.0,
+    // });
   }
 };
 
